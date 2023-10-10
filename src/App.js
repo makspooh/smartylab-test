@@ -2,7 +2,7 @@ import React from "react";
 
 import BlockLayout from "./components/layouts/BlockLayout";
 import PalindromeChecker from "./components/blocks/PalindromeChecker";
-import MatrixRotator from "./components/blocks/PalindromeChecker/MatrixRotator";
+import MatrixRotator from "./components/blocks/MatrixRotator";
 
 import styles from "./App.module.css";
 

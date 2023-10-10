@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 import styles from "./index.module.css";
 
-const Input = ({
+const TextArea = ({
   value,
   valueKey,
   label,
@@ -26,7 +26,7 @@ const Input = ({
       </label>
 
       <div className={styles.fieldWrapper}>
-        <input
+        <textarea
           id={id}
           className={styles.field}
           value={value}
@@ -40,7 +40,7 @@ const Input = ({
   );
 };
 
-Input.propTypes = {
+TextArea.propTypes = {
   value: PropTypes.string.isRequired,
   valueKey: PropTypes.string,
   label: PropTypes.string,
@@ -49,7 +49,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
 };
 
-Input.defaultProps = {
+TextArea.defaultProps = {
   valueKey: "",
   label: "",
   placeholder: "",
@@ -57,4 +57,4 @@ Input.defaultProps = {
   onChange: () => {},
 };
 
-export default Input;
+export default TextArea;

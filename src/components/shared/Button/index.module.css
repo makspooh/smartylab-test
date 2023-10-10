@@ -1,0 +1,34 @@
+.container {
+    position: relative;
+}
+
+.button {
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    outline: 0;
+    background: #046150;
+    color: #fd8900;
+    font-size: 36px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.button:hover ~ .background {
+    will-change: left, bottom;
+    left: 5px;
+    bottom: 5px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background: #fd8900;
+    border: 2px solid #000000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}

@@ -20,12 +20,12 @@
     width: 100%;
     outline: 0;
     padding: 10px;
-    border: 2px solid #000000;
     box-sizing: border-box;
     font-size: 36px;
     font-weight: 700;
     color: #fd8900;
     background: #fff8dc;
+    border: 2px solid #000000;
     position: relative;
     z-index: 1;
 }

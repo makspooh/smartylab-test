@@ -20,11 +20,12 @@ const PalindromeChecker = () => {
   const handleInputChange = (value, valueKey) => {
     setInputs((prev) => ({ ...prev, [valueKey]: value }));
   };
+
   return (
     <>
       <p className={styles.title}>Task #1: Is palindrome?</p>
 
-      <p className={styles.description}>Just type text below and find out!</p>
+      <p className={styles.description}>Type text below and find out!</p>
 
       <Input
         value={inputs.isPalindrome}
