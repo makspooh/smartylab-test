@@ -25,8 +25,6 @@ const PalindromeChecker = () => {
     <>
       <p className={styles.title}>Task #1: Is palindrome?</p>
 
-      <p className={styles.description}>Type text below and find out!</p>
-
       <Input
         value={inputs.isPalindrome}
         valueKey="isPalindrome"

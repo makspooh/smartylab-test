@@ -1,12 +1,6 @@
 .title {
     font-size: 80px;
     font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.description {
-    font-size: 60px;
-    font-weight: 700;
     margin-bottom: 40px;
 }
 
@@ -20,8 +14,29 @@
     position: relative;
 }
 
-.result {
+.results {
     font-size: 46px;
     font-weight: 700;
     color: #fd8900;
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.jsonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.resultTitle {
+    color: #046150;
+}
+
+.result {
+    background: #046150;
+    border: 2px solid #000000;
+    padding: 20px;
+    box-sizing: border-box;
 }

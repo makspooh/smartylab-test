@@ -20,7 +20,8 @@ p,
 label,
 input,
 textarea,
-button {
+button,
+pre {
   margin-block-start: 0;
   margin-block-end: 0;
   -webkit-text-stroke: 2px #000000;
