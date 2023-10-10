@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.field {
+    outline: 0;
+    padding: 10px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #fd8900;
+    font-weight: 700;
+    background: #fff8dc;
+    transition: all 0.3s ease;
+}
+
+.field:focus {
+    border-color: #fd8900;
+}
