@@ -24,3 +24,8 @@
 .field:focus {
     border-color: #fd8900;
 }
+
+.field::selection {
+    color: #a11512;
+    background: #fd8900;
+}
