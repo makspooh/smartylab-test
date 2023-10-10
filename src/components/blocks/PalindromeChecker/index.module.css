@@ -1,0 +1,15 @@
+.title {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.input {
+    margin-bottom: 40px;
+}
+
+.result {
+    font-size: 46px;
+    font-weight: 700;
+    color: #fd8900;
+}
