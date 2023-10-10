@@ -4,10 +4,10 @@ import classNames from "classnames";
 
 import styles from "./index.module.css";
 
-const Button = ({ label, className, onClick }) => {
+const Button = ({ label, className, isDisabled, onClick }) => {
   return (
     <div className={classNames(styles.container, className)}>
-      <button className={styles.button} onClick={onClick}>
+      <button className={styles.button} disabled={isDisabled} onClick={onClick}>
         {label}
       </button>
 
@@ -19,12 +19,14 @@ const Button = ({ label, className, onClick }) => {
 Button.propTypes = {
   label: PropTypes.string,
   className: PropTypes.string,
+  isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   label: "",
   className: "",
+  isDisabled: false,
   onClick: () => {},
 };
 

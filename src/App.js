@@ -5,6 +5,7 @@ import PalindromeChecker from "./components/blocks/PalindromeChecker";
 import MatrixRotator from "./components/blocks/MatrixRotator";
 
 import styles from "./App.module.css";
+import Calculator from "./components/blocks/Calculator";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
 
       <BlockLayout>
         <MatrixRotator />
+      </BlockLayout>
+
+      <BlockLayout>
+        <Calculator />
       </BlockLayout>
     </div>
   );

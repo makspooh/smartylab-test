@@ -16,10 +16,15 @@
     z-index: 1;
 }
 
-.button:hover ~ .background {
+.button:not(:disabled).button:hover ~ .background {
     will-change: left, bottom;
     left: 5px;
     bottom: 5px;
+}
+
+.button:disabled {
+    background: #e1c8b3;
+    cursor: not-allowed;
 }
 
 .background {
