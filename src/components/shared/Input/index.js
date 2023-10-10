@@ -11,6 +11,7 @@ const Input = ({
   label,
   placeholder,
   className,
+  readOnly,
   onChange,
 }) => {
   const id = nanoid();
@@ -21,9 +22,11 @@ const Input = ({
 
   return (
     <div className={classNames(styles.container, className)}>
-      <label htmlFor={id} className={styles.label}>
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} className={styles.label}>
+          {label}
+        </label>
+      )}
 
       <div className={styles.fieldWrapper}>
         <input
@@ -31,6 +34,7 @@ const Input = ({
           className={styles.field}
           value={value}
           placeholder={placeholder}
+          readOnly={readOnly}
           onChange={handleChange}
         />
 
@@ -46,6 +50,7 @@ Input.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
+  readOnly: PropTypes.bool,
   onChange: PropTypes.func,
 };
 
@@ -54,6 +59,7 @@ Input.defaultProps = {
   label: "",
   placeholder: "",
   className: "",
+  readOnly: false,
   onChange: () => {},
 };
 
