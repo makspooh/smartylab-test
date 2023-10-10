@@ -70,11 +70,13 @@ const MatrixRotator = () => {
       <div className={styles.buttons}>
         <Button
           label="Rotate left"
+          isDisabled={!inputs.formattedJson}
           onClick={() => handleRotateMatrix("left")}
         />
 
         <Button
           label="Rotate right"
+          isDisabled={!inputs.formattedJson}
           onClick={() => handleRotateMatrix("right")}
         />
       </div>

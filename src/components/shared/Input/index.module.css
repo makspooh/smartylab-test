@@ -36,9 +36,8 @@
     bottom: 4px;
 }
 
-.field::selection {
-    color: #a11512;
-    background: #fd8900;
+.field:read-only {
+    pointer-events: none;
 }
 
 .background {

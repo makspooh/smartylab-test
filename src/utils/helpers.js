@@ -43,14 +43,20 @@ export const isMatrix = (matrix) => {
 export const rotateMatrix = (matrix, direction) => {
   const rows = matrix.length;
   const cols = matrix[0].length;
-  const rotatedMatrix = new Array(cols).fill(0).map(() => []);
+  const rotatedMatrix = new Array(cols).fill(null).map(() => new Array(rows));
 
-  for (let i = 0; i < cols; i++) {
-    for (let j = 0; j < rows; j++) {
-      if (direction === "left") {
-        rotatedMatrix[i].push(matrix[j][cols - 1 - i]);
-      } else if (direction === "right") {
-        rotatedMatrix[i].unshift(matrix[j][cols - 1 - i]);
+  if (direction === "left") {
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        rotatedMatrix[cols - col - 1][row] = matrix[row][col];
+      }
+    }
+  }
+
+  if (direction === "right") {
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        rotatedMatrix[col][rows - row - 1] = matrix[row][col];
       }
     }
   }

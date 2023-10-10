@@ -32,6 +32,7 @@ const TextArea = ({
           value={value}
           placeholder={placeholder}
           onChange={handleChange}
+          rows={10}
         />
 
         <div className={styles.background} />
