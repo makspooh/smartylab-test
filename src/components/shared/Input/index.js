@@ -32,6 +32,8 @@ const Input = ({
         placeholder={placeholder}
         onChange={handleChange}
       />
+
+      <div className={styles.background} />
     </div>
   );
 };
