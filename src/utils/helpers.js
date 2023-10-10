@@ -1,4 +1,4 @@
-const isJson = (jsonString) => {
+export const isJson = (jsonString) => {
   try {
     JSON.parse(jsonString);
 
@@ -41,22 +41,25 @@ export const isMatrix = (matrix) => {
 };
 
 export const rotateMatrix = (matrix, direction) => {
-  const rows = matrix.length;
-  const cols = matrix[0].length;
-  const rotatedMatrix = new Array(cols).fill(null).map(() => new Array(rows));
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
 
-  if (direction === "left") {
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        rotatedMatrix[cols - col - 1][row] = matrix[row][col];
-      }
-    }
-  }
+  let rotatedMatrix;
 
   if (direction === "right") {
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        rotatedMatrix[col][rows - row - 1] = matrix[row][col];
+    rotatedMatrix = new Array(numCols).fill(null).map(() => []);
+  } else {
+    rotatedMatrix = new Array(numCols)
+      .fill(null)
+      .map(() => new Array(numRows).fill(null));
+  }
+
+  for (let row = 0; row < numRows; row++) {
+    for (let col = 0; col < numCols; col++) {
+      if (direction === "right") {
+        rotatedMatrix[col][numRows - 1 - row] = matrix[row][col];
+      } else if (direction === "left") {
+        rotatedMatrix[numCols - 1 - col][row] = matrix[row][col];
       }
     }
   }
